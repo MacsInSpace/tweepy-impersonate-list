@@ -1,0 +1,43 @@
+
+
+def destroyListIfRequired(api,tag):
+  lists=api.lists_all()
+  listexists= False
+
+  for l in lists:
+    for l2 in l:
+      if type(l2) is tweepy.models.List:
+        if l2.slug==tag:
+          listexists=True
+          report("List appears to exist...destroying it now")
+          api.destroy_list(l2.slug)
+
+  if listexists is False:
+    report("List did not appear to exist...")
+
+
+
+
+
+
+
+
+
+list = api.lists_all(twitterlist) 
+
+api.destroy_list(owner_screen_name = user, slug = twitterlist)
+
+
+
+
+list = api.create_list(twitterlist, mode = mode) 
+
+api.add_list_member(list_id = list.id_str, screen_name = target, owner_screen_name = user)
+
+with open(path, 'r') as f:
+    for line in f:
+      try:  
+        print(line)
+        api.add_list_member(list_id = list.id_str, screen_name = line, owner_screen_name = user)
+      except Exception:
+        traceback.print_exc()
