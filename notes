@@ -41,3 +41,20 @@ with open(path, 'r') as f:
         api.add_list_member(list_id = list.id_str, screen_name = line, owner_screen_name = user)
       except Exception:
         traceback.print_exc()
+        
+        
+        
+        
+        
+list = api.lists_all() 
+
+
+api.lists_all(screen_name = user, slug = target) 
+
+
+list = api.create_list(twitterlist, mode = mode) 
+
+
+
+api.create_list(twitterlist, mode = mode) 
+
