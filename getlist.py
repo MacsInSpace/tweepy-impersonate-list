@@ -9,7 +9,7 @@ auth.set_access_token("",
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, compression=True)
 
 user = "me"
-target = "realdonalttrump"
+target = "realdonaldtrump"
 
 
 twitterlist = (target)+ "_friends"
