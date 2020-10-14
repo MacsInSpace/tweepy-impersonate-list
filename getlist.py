@@ -12,9 +12,9 @@ user = "me"
 target = "realdonaldtrump"
 
 
-twitterlist = (target)+ "_friends"
+twitterlist = (target)+ "friends"
 mode = "private"
-path = "/tmp/" +(target)+ "_friends.csv"
+path = "/tmp/" +(target)+ "friends.csv"
 
 
 def get_friends(user_name):
