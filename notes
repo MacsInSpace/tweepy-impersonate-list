@@ -1,3 +1,29 @@
+twitterlist = (target)+ "friends"
+mode = "private"
+path = "/tmp/" +(target)+ "friends.csv"
+
+slug = (target)+ 'friends'
+
+# fetching the User ID 
+userid = api.get_user(user) 
+UID = userid.id_str 
+  
+# fetching lids ID
+list = api.get_list(owner_screen_name=user, slug=slug) 
+LID = list.id_str 
+
+
+print("The ID of the user is : " + UID)
+print("The ID of the list is : " + LID) 
+
+
+
+
+
+
+
+
+
 
 
 def destroyListIfRequired(api,tag):
